@@ -1,0 +1,1 @@
+This is a simple login form built using HTML, javascript and tailwindcss. it includes validation to check user input before allowing login.
