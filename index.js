@@ -4,7 +4,7 @@ form.addEventListener("submit", function(e) {
 
   
   let correctEmail = "ife@gmail.com";
-  let correctPassword = "1234";
+  let correctPassword = "12345678";
 
   
   let email = document.getElementById("email").value;
@@ -16,8 +16,12 @@ form.addEventListener("submit", function(e) {
     word.innerHTML = "You must input required field";
     word.style.color = "red";
     return;
+  }  else if(isNaN(password)){
+        word.innerHTML = "Password required in number";
+        word.style.color = "red"
+  } else if(password < 8){
+    word.innerHTML = "Password must be atleast 8 characters long"
   }
-
   
   if (email === correctEmail && password === correctPassword) {
     word.innerHTML = "You have been logged in successfully";
