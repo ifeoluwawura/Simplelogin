@@ -15,11 +15,8 @@ form.addEventListener("submit", function(e) {
   if (email === "" || password === "") {
     word.innerHTML = "You must input required field";
     word.style.color = "red";
-    return;
-  }  else if(isNaN(password)){
-        word.innerHTML = "Password required in number";
-        word.style.color = "red"
-  } else if(password < 8){
+
+  }   else if(password.length < 8){
     word.innerHTML = "Password must be atleast 8 characters long"
   }
   
